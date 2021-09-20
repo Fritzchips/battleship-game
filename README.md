@@ -32,4 +32,4 @@ has opened my mind to the different possibilities OOP could accomplish. C# is a 
 
 ---
 
-- **Fritz Solibio** - _Software Development Mastermind Student_
+- **Fritz Solibio** - _Software Developer_ [LinkedIn](https://www.linkedin.com/in/fritz-solibio-4aa9b321b/) | [Website](https://www.fritzsolibio.ca/)
