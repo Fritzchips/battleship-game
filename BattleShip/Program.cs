@@ -10,8 +10,5 @@ namespace BattleShip
             BattleField gameBoard = new BattleField();
             gameBoard.runGame();
         }
-
-        
-
     }
 }

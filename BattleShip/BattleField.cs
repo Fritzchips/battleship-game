@@ -20,20 +20,7 @@ namespace BattleShip
 
         public BattleField()
         {
-            static string[,] populateGrid()
-            {
-                string[,] gridTemplate = new string[10, 10];
-
-                for (int i = 0; i < gridTemplate.GetLength(0); i++)
-                {
-                    for (int j = 0; j < gridTemplate.GetLength(1); j++)
-                    {
-                        gridTemplate[i, j] = "-";
-                    }
-                }
-
-                return gridTemplate;
-            }
+            
             Random random = new Random();
             int enemyRow = random.Next(0, 10);
             int enemyColumn = random.Next(0, 5);
@@ -48,7 +35,21 @@ namespace BattleShip
             GridSpace = populateGrid();
             Cannons = 8;
             EnemyLife = 5;
-    }
+        }
+        static string[,] populateGrid()
+        {
+            string[,] gridTemplate = new string[10, 10];
+
+            for (int i = 0; i < gridTemplate.GetLength(0); i++)
+            {
+                for (int j = 0; j < gridTemplate.GetLength(1); j++)
+                {
+                    gridTemplate[i, j] = "-";
+                }
+            }
+
+            return gridTemplate;
+        }
 
         public void drawBoard()
         {
@@ -113,6 +114,9 @@ namespace BattleShip
 
         NewGame:
             Console.Clear();
+            Cannons = 8;
+            EnemyLife = 5;
+            GridSpace = populateGrid();
             drawBoard();
 
         Restart:
@@ -149,7 +153,7 @@ namespace BattleShip
                     Console.WriteLine("Pressed {0}\nTill next time General!", Console.ReadKey().Key);
                 }
                 else
-                {
+                {         
                     goto NewGame;
                 }
 
